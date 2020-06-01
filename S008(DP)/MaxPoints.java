@@ -1,4 +1,6 @@
 /*
+Collect Maximum points:
+
 A game has a board with an RxC matrix having R rows and C columns containing positive integer values as cell
 values. A player can start from the top-left cell and perform the following two navigations after collecting the points in
 that cell.
