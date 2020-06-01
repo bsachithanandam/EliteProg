@@ -47,5 +47,37 @@ Output:
 
 */
 
+import java.util.*;
+public class Hello {
 
+    public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int r,c,i,j;
+		r = sc.nextInt();
+		c = sc.nextInt();
+		int[][] mat = new int[r][c];
+		for(i=0;i<r;i++){
+		    for(j=0;j<c;j++){
+		        mat[i][j] = sc.nextInt();
+		    }
+		}
+		int[][] max = new int[r][c];
+		int start = sc.nextInt();
+		int end = sc.nextInt();
+		max[start][end] = mat[start][end];
+		for(j=end+1;j<c;j++){
+		    max[start][j] = mat[start][j] + max[start][j-1];
+		}
+		for(i = start+1 ; i<r;i++){
+		    max[i][end] = mat[i][end] + max[i-1][end];
+		}
+		for(i=start+1;i<r;i++){
+		    for(j=end+1;j<c;j++){
+		        max[i][j] = Math.max(max[i][j-1],max[i-1][j])+mat[i][j];
+		    }
+		    
+		}
+		System.out.println(max[r-1][c-1]);
 
+	}
+}
