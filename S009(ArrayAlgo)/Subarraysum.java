@@ -42,7 +42,7 @@ public class Hello {
 
     public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		int n,i,start=0,next=1,sum,currsum=0;
+		int n,i,start=0,next=0,sum,currsum=0;
 		n = sc.nextInt();
 		int[] a = new int[n];
 		for(i=0;i<n;i++){
@@ -50,12 +50,12 @@ public class Hello {
 		}
 		sum = sc.nextInt();
 		currsum = a[0]+a[1];
-		while(start<n){
+		while(start<n && next<n){
 		   if(currsum == sum){
 		       System.out.print("Yes");
 		       System.exit(0);
 		   }
-		   else if(currsum<sum){
+		   else if(currsum<sum && next+1<n){
 		       next++;
 		       currsum += a[next];
 		   }
