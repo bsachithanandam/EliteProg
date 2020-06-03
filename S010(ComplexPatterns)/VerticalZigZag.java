@@ -44,11 +44,11 @@ public class Hello {
 		            System.out.print(m+" ");
 		        }
 		        else if(j%2==0){
-		          System.out.print(m+l);
+		          System.out.print(m+l+" ");
 		          m = m+l;
 		        }
 		        else{
-		            System.out.print(m+k);
+		            System.out.print(m+k+" ");
 		            m = m+k;
 		        }
 		    }
