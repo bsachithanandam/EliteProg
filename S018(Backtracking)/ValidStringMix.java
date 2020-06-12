@@ -59,19 +59,19 @@ public class Hello {
 	public static boolean isValid(String s1,String s2,String s3,int n1,int n2,int n3){
 	    while(n3<s3.length()){
 	        if(n1<s1.length() && n2<s2.length() && s1.charAt(n1)==s3.charAt(n3) && s2.charAt(n2) == s3.charAt(n3)){
-	            if(isValid(s1,s2,s3,n1+1,n2,n3)){
+	            if(isValid(s1,s2,s3,n1+1,n2,n3+1)){
 	                return true;
 	            }
 	            else{
-	                return isValid(s1,s2,s3,n1,n2+1,n3);
+	                return isValid(s1,s2,s3,n1,n2+1,n3+1);
 	            }
 	            
 	        }
-	        else if(s1.charAt(n1)==s3.charAt(n3)){
+	        else if(n1<s1.length() && s1.charAt(n1)==s3.charAt(n3)){
 	            n1++;
 	            n3++;
 	        }
-	        else if(s2.charAt(n2)==s3.charAt(n3)){
+	        else if(n2<s2.length() && s2.charAt(n2)==s3.charAt(n3)){
 	            n2++;
 	            n3++;
 	            
