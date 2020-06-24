@@ -54,6 +54,9 @@ public class Hello {
 		int[] c = new int[9];
 		int[] s = new int[9];
 		int d,i,j;
+	    for(i=0;i<9;i++){
+		    r[i]=c[i]=s[i]=1;
+	    }
 		for(i=0;i<9;i++){
 		    for(j = 0;j<9;j++){
 		        d = sc.nextInt();
