@@ -38,7 +38,7 @@ int main()
     scanf("%d%d",&x,&y);
     while(y>x){
         if(y&1){
-            y+1;
+           y = y+1;
         }
         else{
             y =y/2;
