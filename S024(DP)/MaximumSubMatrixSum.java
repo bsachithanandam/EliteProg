@@ -54,10 +54,10 @@ public class Hello {
 		int k = sc.nextInt();
 		int max = Integer.MIN_VALUE;
 		for(i=0;i<=r-k;i++){
-		    for(j=1;j<c-k+1;j++){
+		    for(j=1;j<=c-k+1;j++){
 		        int sum =0;
 		        for(int s=i;s<i+k;s++){
-		            sum+=mat[s][j+k-1];
+		            sum+=mat[s][j+k-1]-mat[s][j-1];
 		        }
 		        if(sum>max){
 		            max = sum;
