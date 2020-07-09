@@ -45,3 +45,29 @@ krac
 
 */
 
+#include<stdio.h>
+#include <stdlib.h>
+void swap(char a[],int s,int e){
+    char temp = a[s];
+    a[s] = a[e];
+    a[e] = temp;
+}
+void permute(char a[],int l,int r){
+    if(l==r){
+        printf("%s\n",a);
+    }
+    else{
+        for(int i=l;i<=r;i++){
+            swap(a,l,i);
+            permute(a,l+1,r);
+            swap(a,l,i);
+        }
+    }
+}
+int main()
+{
+    char s[11];
+    scanf("%s",s);
+    permute(s,0,strlen(s)-1);
+
+}
