@@ -61,6 +61,6 @@ public class Hello {
 		String[] firstLine = sc.nextLine().split(" ");
 		String str = firstLine[0].trim();
 		int ref = Integer.parseInt(firstLine[1].trim());
-		System.out.println("The ans is:"+permute(str,0,str.length()-1,ref));
+		System.out.println(permute(str,0,str.length()-1,ref));
   }
 }
