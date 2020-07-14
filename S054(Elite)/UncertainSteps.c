@@ -47,7 +47,7 @@ Output:
 
 int main()
 {
-    int modVal = 100000007;
+    int modVal = 1000000007;
     int n;
     scanf("%d ",&n);
     if(n==1){
