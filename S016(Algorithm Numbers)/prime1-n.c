@@ -32,7 +32,7 @@ int main()
             j = i*i;
             while(j<=n){
                 if(a[j]==1){
-                    a[j]=0;
+                    a[j]=0;             //Prime number
                 }
                 j+=i;
             }
